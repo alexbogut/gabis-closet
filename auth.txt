@@ -1,0 +1,11 @@
+https://api.instagram.com/oauth/authorize
+  ?client_id=1332287557340473
+  &redirect_uri=https://gabis-closet.vercel.app/
+  &scope=user_profile,user_media
+  &response_type=code
+
+
+  {
+    "access_token": "IGQVJVanVBc25iYVhJVXk5MGp0cnZA1Y3R3OThvSnZA3dlg5MllTN21HUl8yek03X0pLU2pNVHBEc09reGYxMXdEVlhzN09SZAEpWSkdkODN5VGVkLXlJajdzSWl6cUYzZAngtVU1SRXQtbDdxdURmR2IzdzN1ZAnRnamptbmNZA",
+    "user_id": 17841401367884253
+}

@@ -2,5 +2,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100vh;
+}
+
+.search {
+  display: flex;
   justify-content: center;
+}
+
+.input {
+  margin-right: 100px;
+}
+
+body {
+  background-image: url("../images/gabi.jpg");
+  background-size: 100vh;
 }

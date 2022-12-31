@@ -7,7 +7,16 @@ interface pageProps {
 }
 
 const page: FC<pageProps> = ({ params: { name } }) => {
-  return <div>{name}'s Page</div>;
+  return (
+    <div className="search">
+      <div className="input">
+        <input type="text" placeholder={name} />
+      </div>
+      <div>
+        <button>search</button>
+      </div>
+    </div>
+  );
 };
 
 export default page;
