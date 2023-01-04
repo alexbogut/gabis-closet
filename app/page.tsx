@@ -1,21 +1,13 @@
 import { FC } from "react";
+import { Link } from "react-router-dom";
+import Login from "./login";
 
 interface pageProps {}
 
 const page: FC<pageProps> = ({}) => {
   return (
     <div className="login">
-      <div>
-        <label>userName</label>
-        <input type="text" />
-      </div>
-      <div>
-        <label>Password</label>
-        <input type="text" />
-      </div>
-      <div>
-        <button>Login</button>
-      </div>
+      <Login />
     </div>
   );
 };
