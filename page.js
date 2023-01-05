@@ -1,7 +1,7 @@
 import { FC } from "react";
 
 import Image from "next/image";
-import Product from "./Card";
+import Product from "./app/callback/Card";
 let INSTAGRAM_CLIENT_ID = process.env.INSTAGRAM_CLIENT_ID;
 let INSTAGRAM_CLIENT_SECRET = process.env.INSTAGRAM_CLIENT_SECRET;
 

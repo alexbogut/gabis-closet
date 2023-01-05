@@ -6,7 +6,7 @@ interface loginProps {}
 
 const login: FC<loginProps> = ({}) => {
   return (
-    <Link href={"/auth/instagram"}>
+    <Link href={"http://localhost:5000/auth/instagram"}>
       <button>Login with Instagram</button>
     </Link>
   );
