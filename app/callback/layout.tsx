@@ -1,5 +1,4 @@
-import "./globals.css";
-import Home from "./page";
+import Home from "../../page";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function RootLayout({
@@ -10,6 +9,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head />
+      {/* @ts-ignore */}
       <body>{children}</body>
     </html>
   );
