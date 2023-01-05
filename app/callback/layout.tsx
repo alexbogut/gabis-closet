@@ -1,4 +1,3 @@
-import "./globals.css";
 import Home from "./page";
 import "bootstrap/dist/css/bootstrap.min.css";
 
