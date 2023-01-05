@@ -1,8 +1,8 @@
-'use client'
-import React from 'react'
+"use client";
+import React from "react";
 import Card from "react-bootstrap/Card";
 
-const Product = ({img}) => {
+const Product = ({ img }: { img: any }) => {
   return (
     <div className="grid-item">
       <Card style={{ width: "18rem" }}>
@@ -27,6 +27,6 @@ const Product = ({img}) => {
       </Card>
     </div>
   );
-}
+};
 
-export default Product
+export default Product;
