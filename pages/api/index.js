@@ -3,7 +3,7 @@ require("dotenv").config();
 const passport = require("passport");
 const InstaStrategy = require("passport-instagram").Strategy;
 const cookieSession = require("cookie-session");
-const port = process.env.PORT || 5000
+const port = process.env.PORT || 5000;
 
 let INSTAGRAM_CLIENT_ID = process.env.INSTAGRAM_CLIENT_ID;
 let INSTAGRAM_CLIENT_SECRET = process.env.INSTAGRAM_CLIENT_SECRET;
@@ -54,11 +54,14 @@ const instaAuth = passport.authenticate("instagram", {
 
 app.get("/auth/instagram", passport.authenticate("instagram"));
 
-app.get("/auth/instagram/callback", passport.authenticate("instagram", { failureRedirect: '/callback' }),
+app.get(
+  "/auth/instagram/callback",
+  passport.authenticate("instagram", { failureRedirect: "/callback" }),
   function (req, res) {
-  res.redirect('/')
-  });
+    res.redirect("/");
+  }
+);
 
-app.get("")
+app.get("");
 
 app.listen(port);
