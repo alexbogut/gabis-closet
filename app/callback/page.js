@@ -1,10 +1,11 @@
 import { FC } from "react";
+
 import Image from "next/image";
 import Product from "./Card";
 let INSTAGRAM_CLIENT_ID = process.env.INSTAGRAM_CLIENT_ID;
 let INSTAGRAM_CLIENT_SECRET = process.env.INSTAGRAM_CLIENT_SECRET;
 
-const fetchToken = async (code: string) => {
+const fetchToken = async (code) => {
   var myHeaders = new Headers();
   myHeaders.append(
     "Cookie",
@@ -27,7 +28,6 @@ const fetchToken = async (code: string) => {
 
   const res = await fetch(
     "https://api.instagram.com/oauth/access_token",
-    // @ts-ignore
     requestOptions
   );
 
@@ -39,7 +39,7 @@ const fetchToken = async (code: string) => {
   return data;
 };
 
-const fetchMedia = async (access_token: string) => {
+const fetchMedia = async (access_token) => {
   var myHeaders = new Headers();
   myHeaders.append(
     "Cookie",
@@ -54,7 +54,6 @@ const fetchMedia = async (access_token: string) => {
 
   const result = await fetch(
     `https://graph.instagram.com/me/media?fields=id,media_url,caption&access_token=${access_token}`,
-    // @ts-ignore
     requestOptions
   );
   const media_data = await result.json();
@@ -64,7 +63,7 @@ const fetchMedia = async (access_token: string) => {
   return media_data;
 };
 
-const page = async function ({ searchParams }: { searchParams: any }) {
+const page = async function ({ searchParams }) {
   const data = await fetchToken(searchParams.code);
 
   const media = await fetchMedia(data.access_token);
@@ -73,7 +72,7 @@ const page = async function ({ searchParams }: { searchParams: any }) {
 
   return (
     <div>
-      {media.data.map((content: any) => (
+      {media.data.map((content) => (
         <Product img={content.media_url} />
       ))}
     </div>

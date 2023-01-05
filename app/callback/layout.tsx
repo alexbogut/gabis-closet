@@ -9,6 +9,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head />
+      {/* @ts-ignore */}
       <body>{children}</body>
     </html>
   );
