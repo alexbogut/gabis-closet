@@ -40,7 +40,7 @@ passport.use(
       clientID: INSTAGRAM_CLIENT_ID,
       clientSecret: INSTAGRAM_CLIENT_SECRET,
       scope: ["user_profile", "user_media"],
-      callbackURL: "https://gabis-closet.vercel.app/callback",
+      callbackURL: "https://gabis-closet.vercel.app/",
     },
     (accessToken, refreshToken, profile, done) => {
       done(null, profile);
@@ -64,4 +64,4 @@ app.get(
 
 app.get("");
 
-app.listen(port);
+app.listen(port, () => console.log(`listening on ${port}`));
